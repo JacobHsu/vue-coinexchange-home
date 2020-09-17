@@ -1,23 +1,7 @@
 <template>
   <div>
     <div id="fullpage">
-      <div id="pagetips" style="border-bottom:1px solid rgb(28, 39, 58);">
-        <div class="topnav">
-          <div class="carl">
-            <div class="notice-list">
-              <div class="notice-item" v-for="(item,index) in FAQList">
-                <div class="cal_content">
-                  <span></span>
-                  <router-link target="_blank" :to="{path: '/announcement/' + item.id}">[ {{item.createTime}} ] {{strde(item.title)}}</router-link>
-                </div>
-              </div>
-            </div>
-            <div class="more">
-              <router-link to="/announcement/0" target="_blank">{{$t('common.more')}}</router-link>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div class="section" id="page1">
         <!-- <div v-if="lang==='简体中文'"> -->
 
@@ -44,7 +28,7 @@
           </div>
         </div>
       </div>
-      <div id="pagetips" style="background: #172636;">
+      <!-- <div id="pagetips" style="background: #172636;">
         <div class="agent-panel">
           <div class="title">
             <div class="gettingstart">{{$t('sectionPage.gettingstart')}}</div>
@@ -95,6 +79,23 @@
                   <p  class="agent-count">{{$t('sectionPage.usersocialtips')}}</p>
                 </div>
               </router-link>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <div id="pagetips" style="border-bottom:1px solid rgb(28, 39, 58);">
+        <div class="topnav">
+          <div class="carl">
+            <div class="notice-list">
+              <div class="notice-item" v-for="(item,index) in FAQList" :key="item.id">
+                <div class="cal_content">
+                  <span></span>
+                  <router-link target="_blank" :to="{path: '/announcement/' + item.id}">[ {{item.createTime}} ] {{strde(item.title)}}</router-link>
+                </div>
+              </div>
+            </div>
+            <div class="more">
+              <router-link to="/announcement/0" target="_blank">{{$t('common.more')}}</router-link>
             </div>
           </div>
         </div>
@@ -1266,7 +1267,7 @@ export default {
 }
 
 #pagetips {
-  background: #141e2b;
+  background: #74b4bc;
   padding: 0 10%;
 
   overflow: hidden;
@@ -1299,11 +1300,11 @@ export default {
           .cal_content{
             max-width:100%;
             a{
-              color: rgba(130,142,161,1);
+              color: #041e25;
               font-size:12px;
             }
             a:hover{
-              color: #f0a70a!important;
+              color: #041e25!important;
             }
           }
         }
@@ -1321,7 +1322,7 @@ export default {
         z-index: 0;
         right: 0;
         a {
-          color: #f0a70a!important;
+          color: #041e25!important;
           font-size: 12px;
           padding: 3px 12px;
           border-radius:3px;

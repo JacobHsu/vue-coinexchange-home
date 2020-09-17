@@ -53,28 +53,28 @@
                   <Submenu name="lang">
                       <template slot="title" class="lang-title">
                         <span style="display: none;">{{languageValue}}</span>
-                        <img class="lang-img" v-if="lang=='简体中文'" src="./assets/images/lang-zh.png"></img>
-                        <img class="lang-img" v-if="lang=='English'" src="./assets/images/lang-en.png"></img>
+                        <!-- <img class="lang-img" v-if="lang=='简体中文'" src="./assets/images/lang-zh.png"></img>
+                        <img class="lang-img" v-if="lang=='English'" src="./assets/images/lang-en.png"></img> -->
                       </template>
-                      <MenuItem name="zh" class="lang-item"><img src="./assets/images/lang-zh.png"></img>简体中文</MenuItem>
-                      <MenuItem name="en" class="lang-item"><img src="./assets/images/lang-en.png"></img>ENGLISH</MenuItem>
+                      <MenuItem name="zh" class="lang-item">简体中文</MenuItem>
+                      <MenuItem name="en" class="lang-item">ENGLISH</MenuItem>
                   </Submenu>
               </Menu>
             </div>
             <div class="rightwrapper">
-              <poptip placement="bottom" width="120" class="appdownload" trigger="hover">
-                <a href="javascript:;" style="font-size:14px;">{{$t("header.appdownlaod")}}
-                  <Icon type="md-arrow-dropdown" size="18" />
-                </a>
-                <div class="api" slot="content">
-                  <div class="ios">
-                    <img src="../src/assets/images/appdownload.png" alt="">
-                    <div class="tips">
-                      <span>{{$t("header.scandownload")}}</span>
+                <!-- <poptip placement="bottom" width="120" class="appdownload" trigger="hover">
+                  <a href="javascript:;" style="font-size:14px;">{{$t("header.appdownlaod")}}
+                    <Icon type="md-arrow-dropdown" size="18" />
+                  </a>
+                  <div class="api" slot="content">
+                    <div class="ios">
+                      <img src="../src/assets/images/appdownload.png" alt="">
+                      <div class="tips">
+                        <span>{{$t("header.scandownload")}}</span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </poptip>
+                </poptip> -->
             </div>
             <div class="rr login-container">
               <!-- 判断是否登录 -->
@@ -627,7 +627,7 @@ export default {
         .layout-logo{
           width: 300px;
           height: 48px;
-          background: url(./assets/images/logo.png) no-repeat;
+          // background: url(./assets/images/logo.png) no-repeat;
           background-size: 100% 100%;
           float: left;
           position: absolute;
@@ -649,8 +649,8 @@ export default {
                     }
                   }
                   li.ivu-menu-item.ivu-menu-item-active.ivu-menu-item-selected {
-                    color: #f0a70a;
-                        border-bottom: 3px solid #ffa800;
+                      color: #74b4bc;
+                      border-bottom: 3px solid #74b4bc;
                   }
                 }
                 .router-link-exact-active.router-link-active {
@@ -675,7 +675,7 @@ export default {
             float: left;
             padding-right: 20px;
             a {
-              color: #828ea1;
+              color:  #828ea1;
               display: inline;
               padding-right: 20px;
               border-right: 1px solid #828ea1;
@@ -702,7 +702,7 @@ export default {
                 box-sizing: border-box;
                 li {
                   height: 100%;
-                  color: #828ea1;
+                  color: #fff;
                 }
                 &:hover {
                   li {
@@ -1293,7 +1293,7 @@ export default {
   .page-content {
     .layout {
       .layout-ceiling {
-        background: #172636;
+        background: linear-gradient(45deg, #041e25, #07404a, #74b4bc); //#172636;
         box-shadow: 0 0 5px 5px rgba(0,0,0,0.1);
         .layout-ceiling-main {
           .header_nav {
@@ -1518,7 +1518,7 @@ body {
 .ivu-menu-vertical .ivu-menu-submenu .ivu-menu-item {
   padding-left: 0 !important;
   padding-right: 0;
-  color: rgba(130,142,161,1);
+  color: #fff; // rgba(130,142,161,1);
   font-size: 14px;
   border-right: 0 !important;
 }
