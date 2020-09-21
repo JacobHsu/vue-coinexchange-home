@@ -198,14 +198,6 @@
           <p>Copyright © 2019 - Bizzan.com All rights reserved.&nbsp;&nbsp;</p>
           <div class="social-list">
             <ul>
-              <Tooltip content="Wechat" theme="dark" placement="top">
-                <li>
-                  <Icon custom="i-icon iconfont iconweixin" />
-                </li>
-                <div slot="content">
-                    <img style="width: 130px;border-radius: 5px;" src="./assets/images/wechatqrcode.jpg"></img>
-                </div>
-              </Tooltip>
               <Tooltip content="Biyong" theme="dark" placement="top">
                 <li>
                   <Icon custom="i-icon iconfont iconbiyonglogo" />
@@ -222,11 +214,6 @@
                     <img style="width: 130px;border-radius: 5px;" src="./assets/images/telegramqrcode.jpg"></img>
                 </div>
               </Tooltip>
-              <Tooltip content="https://weibo.com/bizzan" theme="dark" placement="top">
-                <li>
-                  <Icon custom="i-icon iconfont iconweibo" />
-                </li>
-              </Tooltip>
               <Tooltip content="https://twitter.com/BIZZANGlobal" theme="dark" placement="top">
                 <li>
                   <Icon type="logo-twitter" />
@@ -242,12 +229,6 @@
                   <Icon custom="i-icon iconfont iconreddit" />
                 </li>
               </Tooltip>
-              <Tooltip content="coming" theme="dark" placement="top" style="display:none;">
-                <li>
-                  <Icon type="logo-facebook" />
-                </li>
-              </Tooltip>
-
             </ul>
           </div>
         </div>
@@ -1639,7 +1620,7 @@ body {
   padding: 80px 10%;
   color: #53575c;
   color: rgba(255, 255, 255, 0.8);
-  background: #192330;
+  background: #041e25;
 }
 
 .footer_left {

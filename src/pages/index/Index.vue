@@ -122,7 +122,34 @@
 -->
         </div>
       </div>
-      <div class="section bg-light" id="page6">
+      <div class="section" id="page11">
+        <p class="title">{{$t('sectionPage.brandTitle')}}</p>
+        <p class="subtitle">{{$t('sectionPage.brandDetail')}}</p>
+        <!-- <div class="detail">{{$t('sectionPage.brandDesc1')}}</div> -->
+        <ul>
+          <li>
+            <div><img src="../../assets/images/feature_safe.png" alt=""></div>
+            <p class="title">{{$t('description.title1')}}</p>
+            <p>{{$t('description.message1')}}</p>
+          </li>
+          <li>
+            <div><img src="../../assets/images/feature_fast.png" alt=""></div>
+            <p class="title">{{$t('description.title2')}}</p>
+            <p>{{$t('description.message2')}}</p>
+          </li>
+          <li>
+            <div><img src="../../assets/images/feature_global.png" alt=""></div>
+            <p class="title">{{$t('description.title3')}}</p>
+            <p>{{$t('description.message3')}}</p>
+          </li>
+          <li>
+            <div><img src="../../assets/images/feature_choose.png" alt=""></div>
+            <p class="title">{{$t('description.title4')}}</p>
+            <p>{{$t('description.message4')}}</p>
+          </li>
+        </ul>
+      </div>
+      <!-- <div class="section bg-light" id="page6">
         <p class="title">{{$t('sectionPage.brandTitle')}}</p>
         <p class="subtitle">{{$t('sectionPage.brandDetail')}}</p>
         <div class="detail">{{$t('sectionPage.brandDesc1')}}</div>
@@ -151,9 +178,9 @@
             <p>{{$t('description.message4')}}</p>
           </li>
         </ul>
-      </div>
+      </div> -->
 
-      <div class="section" id="page5">
+      <!-- <div class="section" id="page5">
         <div class="phone_image"></div>
         <ul class="download">
           <li class="qrcode">{{$t('description.scanqrcode')}}</li>
@@ -168,7 +195,7 @@
             </div>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
     <div class="app_bottom">
       <div class="left_logo">
@@ -1555,6 +1582,72 @@ export default {
     margin-bottom: 20px;
     color: #828ea1;
     text-align:justify;
+  }
+}
+#page11{
+  min-height: 460px;
+  padding: 80px 14%;
+  position: relative;
+  .title{
+    color: black;
+    font-size: 30px;
+    text-align:center;
+    width: 100%;
+  }
+  .title-left{
+    font-size: 30px;
+    text-align:left;
+    width: 100%;
+    letter-spacing: 6px;
+  }
+  .subtitle{
+    margin-bottom: 40px;
+    line-height: 4em;
+    color: #828ea1;
+    font-size: 16px;
+    text-align:center;
+    width: 100%;
+  }
+  .detail{
+    line-height: 40px;
+    letter-spacing: 2px;
+    text-indent:45px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #828ea1;
+    text-align:justify;
+  }
+  ul {
+    width: 88%;
+    margin: 0 auto;
+    li {
+      flex: 0 0  25%;
+      display: inline-block;
+      width: 24%;
+      padding: 0 15px;
+      div {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        vertical-align: middle;
+        text-align: center;
+        margin: 0 auto;
+        img {
+          height: 125px;
+          margin-top: 8px;
+        }
+      }
+      p {
+        font-size: 14px;
+        margin: 20px 0;
+        text-align: center;
+        color: #828ea1;
+      }
+      p.title {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
   }
 }
 #page5 {
