@@ -2147,7 +2147,7 @@ fieldset[disabled] .ivu-input {
   color: #FFFFFF;
 }
 .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{
-  bottom: -5px;
+  bottom: 25px;
 }
 .swiper-pagination-bullet{
   background: #FFF;

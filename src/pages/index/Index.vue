@@ -6,13 +6,13 @@
         <!-- <div v-if="lang==='简体中文'"> -->
 
         <div class="spin-wrap banner-panel">
-          <img style="height: 100%;" src="../../assets/images/bannerbg.png"></img>
+          <!-- <img style="height: 100%;" src="../../assets/images/bannerbg.png"></img>
           <p style="text-align:center;font-size:40px;color:#fff;position:absolute;top: 70px;width:100%;letter-spacing:5px;text-shadow: 0px 0px 10px #000000;">{{$t("common.slogan")}}</p>
-          <p style="text-align:center;font-size:20px;color:#828ea1;position:absolute;top: 130px;width:100%;letter-spacing:2px;">{{$t("common.subslogan")}}</p>
+          <p style="text-align:center;font-size:20px;color:#828ea1;position:absolute;top: 130px;width:100%;letter-spacing:2px;">{{$t("common.subslogan")}}</p> -->
           <div class="activity-list" v-show="picShow">
             <div class="swiper-container" id="swiper_container">
               <div class="swiper-wrapper">
-                <div class="swiper-slide" v-for="(item,index) in picList">
+                <div class="swiper-slide" v-for="(item,index) in picList" :key="index">
                   <a v-if="item.linkUrl&&item.linkUrl!=' '&&item.linkUrl!='1'" :href="item.linkUrl" target="_blank">
                     <div class="activity-item">
                       <img :src="item.url"></img>
@@ -21,7 +21,7 @@
                   <div v-else class="activity-item">
                     <img :src="item.url"></img>
                   </div>
-                </div>
+                </div> 
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -870,7 +870,7 @@ export default {
           el: '.swiper-pagination',
           clickable: true,
         },
-        slidesPerView :4,
+        // slidesPerView :4,
         spaceBetween : 25
       });
       var comtainer = document.getElementById('swiper_container');
@@ -1193,30 +1193,47 @@ export default {
 .banner-panel{
   height:400px;background-color:#141e2b;overflow:hidden;position:relative;
   .activity-list{
-    width: 100%;min-width:1200px;display:flex;flex-start:row;justify-content:center;position:absolute;bottom: 20px;
+    // width: 100%;min-width:1200px;display:flex;flex-start:row;justify-content:center;position:absolute;bottom: 20px;
+    width: 100%; position:absolute;
     .swiper-container {
-      width: 72%;
-      max-height: 150px;
-      margin: 0 auto;
-      .swiper-wrapper{
-        margin-bottom: 15px;
+        width: 100%;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
         .activity-item{
-          margin: 0 0;
-          &:hover{
-            opacity:0.9;
-            cursor:pointer;
-          }
           img{
-            max-width:250px;
-            transition: all 0.5s;
+            max-height:400px;
             width: 100%;
-            &:hover{
-              transform: scale(1.05);
-            }
           }
         }
-      }
     }
+    .swiper-slide {
+        background-size: cover;
+        background-position: center;
+    }
+    // .swiper-container {
+    //   width: 72%;
+    //   max-height: 150px;
+    //   margin: 0 auto;
+    //   .swiper-wrapper{
+    //     margin-bottom: 15px;
+    //     .activity-item{
+    //       margin: 0 0;
+    //       &:hover{
+    //         opacity:0.9;
+    //         cursor:pointer;
+    //       }
+    //       img{
+    //         max-width:250px;
+    //         transition: all 0.5s;
+    //         width: 100%;
+    //         &:hover{
+    //           transform: scale(1.05);
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 
