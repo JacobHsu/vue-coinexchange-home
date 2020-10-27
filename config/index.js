@@ -64,7 +64,7 @@ module.exports = {
         // Paths
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: 'assets',
-        assetsPublicPath: 'https://bizzan.oss-cn-hangzhou.aliyuncs.com/',
+        assetsPublicPath: './',
 
         /**
          * Source Maps

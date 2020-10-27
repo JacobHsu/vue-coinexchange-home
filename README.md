@@ -37,7 +37,7 @@ npm run build
 
 ```
 
-
+`npm install --save sockjs-client`
 
 ## Future
 1. 统一改用less,实验可以通过变量覆盖的方式定制主题;
