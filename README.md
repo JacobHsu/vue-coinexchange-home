@@ -37,7 +37,50 @@ npm run build
 
 ```
 
-`npm install --save sockjs-client`
+## Build Fixed
+
+`npm install --save sockjs-client@1.1.4`
+`npm install --save compression-webpack-plugin@1.1.11`
+
+src\main.js
+
+```js
+const router = new VueRouter({
+    mode: 'hash', // 'history',
+    routes
+});
+```
+
+build\webpack.base.conf.js
+
+```js
+
+module.exports = {
+    context: path.resolve(__dirname, '../'),
+    entry: {
+        app: ['./src/main.js'] // ['./node_modules/babel-polyfill/dist/polyfill.js','./src/main.js']
+    },
+    ...
+    ,
+    externals: {
+        'vue': 'Vue',
+        'vue-router': 'VueRouter',
+        'jquery': 'jQuery',
+        "moment": "moment"
+    },
+```
+
+index.html
+
+```html
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.3/vue.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+    <script src="https://cdn.staticfile.org/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/moment.js/2.22.1/moment.min.js"></script>
+```
+
 
 ## Future
 1. 统一改用less,实验可以通过变量覆盖的方式定制主题;

@@ -22,7 +22,7 @@ const createLintingRule = () => ({
 module.exports = {
     context: path.resolve(__dirname, '../'),
     entry: {
-        app: ['./node_modules/babel-polyfill/dist/polyfill.js','./src/main.js']
+        app: ['./src/main.js'] // ['./node_modules/babel-polyfill/dist/polyfill.js','./src/main.js']
     },
     output: {
         path: config.build.assetsRoot,
@@ -90,5 +90,11 @@ module.exports = {
         net: 'empty',
         tls: 'empty',
         child_process: 'empty'
-    }
+    },
+    externals: {
+        'vue': 'Vue',
+        'vue-router': 'VueRouter',
+        'jquery': 'jQuery',
+        "moment": "moment"
+    },
 }

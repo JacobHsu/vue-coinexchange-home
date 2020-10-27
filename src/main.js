@@ -35,7 +35,7 @@ Vue.http.options.headers = {
 };
 
 const router = new VueRouter({
-    mode: 'history',
+    mode: 'hash', // 'history',
     routes
 });
 
